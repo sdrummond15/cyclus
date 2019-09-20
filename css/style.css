@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-nav {
   padding: 18px 0;
   background: #f9f9f9;
-  z-index: 9999; 
-  position: fixed; 
+  z-index: 5000;
+  position: absolute;
   left: 0; 
   top: 0; 
   width: 100%;
@@ -1199,7 +1199,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-offcanvas {
   position: absolute;
-  z-index: 1901;
+  z-index: 9998;
   width: 270px;
   background: black;
   top: 0;
@@ -1476,7 +1476,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .fh5co-nav-toggle {
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 10px;
   z-index: 21;
@@ -1486,7 +1486,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: none;
   height: 44px;
   width: 44px;
-  z-index: 2001;
+  z-index: 9999;
   border-bottom: none !important;
 }
 @media screen and (max-width: 768px) {
