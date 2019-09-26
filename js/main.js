@@ -43,15 +43,20 @@
 			$this
 				.addClass('active')
 				.find('ul')
-				.slideDown(500, 'easeOutExpo');				
+				.slideDown(500, 'easeOutExpo');
 		}).mouseleave(function(){
 
 			var $this = $(this);
 			$this
 				.removeClass('active')
 				.find('ul')
-				.slideUp(500, 'easeOutExpo');				
+				.slideUp(500, 'easeOutExpo');
 		});
+
+        // $('.offcanvas-has-dropdown > a').click(function(event){
+        //     event.preventDefault();
+        //     $(this).siblings('ul').slideToggle();
+        // });
 
 
 		$(window).resize(function(){
