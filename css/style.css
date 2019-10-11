@@ -402,7 +402,12 @@ h1, h2, h3, h4, h5, h6, figure {
 
 @media screen and (max-width: 768px) {
     #fh5co-hero .flexslider .slider-text > .slider-text-inner h2 {
-        font-size: 40px;
+        font-size: 15px;
+    }
+    #fh5co-hero .flexslider .slider-text > .slider-text-inner {
+        display: table-cell;
+        vertical-align: middle;
+        min-height: 300px;
     }
 }
 
