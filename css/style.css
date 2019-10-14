@@ -364,7 +364,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-hero .flexslider .flex-control-nav li a {
-    background: #7a96f;
+    background: #7a916f;
     box-shadow: none;
     width: 12px;
     height: 12px;
@@ -421,6 +421,24 @@ h1, h2, h3, h4, h5, h6, figure {
     letter-spacing: 3px;
     display: block;
     margin-bottom: 20px;
+}
+.social-media {
+    display: block;
+    float: right;
+    margin-right: 20px;
+}
+
+
+.social-media ul li a {
+    font-size: 25px;
+    padding: 5px;
+}
+
+.social-media ul li a span {
+    line-height: 30px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+    font-size: 20px;
 }
 
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .btn {
