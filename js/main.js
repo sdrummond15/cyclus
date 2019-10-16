@@ -1,5 +1,18 @@
 (function () {
 
+    $('.carousel').carousel({
+        interval: 6000,
+        ride: true
+    });
+    $('.carousel').carousel('cycle');
+
+
+    //PADDING PARA O BANNER
+    $(window).on('resize', function () {
+    	$('.carousel-item').height($(window).width() * 0.5);
+        $('#slide').css('padding-top', $('.fh5co-nav').outerHeight());
+    }).trigger('resize');
+
 	'use strict';
 
 	var mobileMenuOutsideClick = function() {
