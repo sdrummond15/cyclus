@@ -1,7 +1,7 @@
 <?php 
 print_r($_POST);
 if(isset($_POST['submit'])){
-    $to = "suporte@omnisoft.com.br"; // this is your Email address
+    $to = "site@cyclus.com.br"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $first_name = $_POST['name'];
 #    $last_name = $_POST['last_name'];
@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+  //  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
     echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     }
@@ -185,7 +185,7 @@ if(isset($_POST['submit'])){
 
 				</div>
 				<div class="col-md-6 animate-box">
-					<form action="contato1.html" method="POST">
+					<form>
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="fname">First Name</label> -->
@@ -221,7 +221,7 @@ if(isset($_POST['submit'])){
 							</div>
 						</div>
 						<div class="form-group">
-							<input name="submit" type="submit" value="Enviar" class="btn btn-primary">
+							<input name="submit" type="submit" id="btn" value="Enviar" class="btn btn-primary">
 						</div>
 
 					</form>		

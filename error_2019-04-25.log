@@ -1,5 +1,0 @@
-[Thu Apr 25 22:59:08.573816 2019] [so:warn] [pid 9] AH01574: module authz_core_module is already loaded, skipping
-[Thu Apr 25 22:59:08.574151 2019] [so:warn] [pid 9] AH01574: module authz_host_module is already loaded, skipping
-[Thu Apr 25 22:59:08.635217 2019] [auth_digest:notice] [pid 17] AH01757: generating secret for digest authentication ...
-[Thu Apr 25 22:59:08.720569 2019] [mpm_prefork:notice] [pid 17] AH00163: Apache/2.4.6 (Red Hat) configured -- resuming normal operations
-[Thu Apr 25 22:59:08.720610 2019] [core:notice] [pid 17] AH00094: Command line: '/usr/sbin/httpd'

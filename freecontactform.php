@@ -1,8 +1,9 @@
 <?php
+echo "oi";
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "suporte@omnisoft.com.br";
+    $email_to = "site@cyclus.com.br";
     $email_subject = "Contato pelo site";
  
     function died($error) {
@@ -16,7 +17,7 @@ if(isset($_POST['email'])) {
  
  
     // validation expected data exists
-/*    if(!isset($_POST['name']) ||
+/*    if(!isset($_POST['fname']) ||
         !isset($_POST['last_name']) ||
         !isset($_POST['email']) ||
         !isset($_POST['telephone']) ||
@@ -26,11 +27,10 @@ if(isset($_POST['email'])) {
 */ 
      
  
-    $first_name = $_POST['name']; // required
-#    $last_name = $_POST['last_name']; // required
+    $first_name = $_POST['fname']; // required
     $email_from = $_POST['email']; // required
     $subject = $_POST['subject']; // required
-#    $telephone = $_POST['telephone']; // not required
+#   $telephone = $_POST['telefone']; // not required
     $comments = $_POST['message']; // required
  
     $error_message = "";
@@ -69,7 +69,7 @@ if(isset($_POST['email'])) {
     $email_message .= "Nome: ".clean_string($first_name)."\n";
 #    $email_message .= "Last Name: ".clean_string($last_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
-#    $email_message .= "Telephone: ".clean_string($telephone)."\n";
+#    $email_message .= "Telepone: ".clean_string($telepone)."\n";
     $email_message .= "Assunto: ".clean_string($subject)."\n";
     $email_message .= "Mensagem: ".clean_string($comments)."\n";
  
@@ -78,13 +78,7 @@ $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 @mail($email_to, $email_subject, $email_message, $headers);  
-?>
- 
-<!-- include your own success html here -->
- 
-Sua mensagem foi enviada
- 
-<?php
- 
+
+ echo 'Sua mensagem foi enviada';
 }
 ?>

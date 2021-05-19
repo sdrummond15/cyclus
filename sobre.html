@@ -60,6 +60,15 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46101844-8"></script>
+		<script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-46101844-8');
+		</script>
 
 	</head>
 	<body>
@@ -67,65 +76,61 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-xs-3">
-					<div id="fh5co-logo"><a href="index.html">
-					<img src="custom-images/logo-informatica.png" width="170">
-					</a></div>
+		<nav class="fh5co-nav" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-xs-3">
+						<div id="fh5co-logo"><a href="index.html">
+							<img src="custom-images/logo_cyclus.png" width="170">
+						</a></div>
+					</div>
+
+					<div class="social-media">
+						<ul>
+							<li><a href="tel:553134815542"><span>(31) 3481-5542</span><i class="fas fa-phone-square"></i></a></li>
+							<li><a href="https://wa.me/553197798960" target="_new"><i class="fab fa-whatsapp-square"></i></a></li>
+							<li><a href="https://www.facebook.com/Cyclus-Informática-107720493972738" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+							<li><a href="https://www.instagram.com/cyclusinformatica/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/cyclus-informática" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+
+					<div class="col-md-9 col-xs-9 text-center menu-1">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="sobre.html">Sobre</a></li>
+							<li><a href="outsourcing.html">Outsourcing</a></li>
+							<li class="has-dropdown">
+								<a href="servicos.html">Serviços</a>
+								<ul class="dropdown">
+									<li><a href="servicos.html#manutencao">Manutenção</a></li>
+									<li><a href="servicos.html#cftv">CFTV</a></li>
+									<li><a href="servicos.html#rede">Rede</a></li>
+									<li><a href="servicos.html#produtos">Produtos</a></li>
+								</ul>
+							</li>
+							<li><a href="contato.html">Contato</a></li>
+							<li><a href="http://rac.cyclus.com.br/v0/index.php" target="_Cyclus_chamados">Chamados</a></li>
+						</ul>
+					</div>
+					<!---
+                    <div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
+                        <ul>
+                            <li class="search">
+                                <div class="input-group">
+                                  <input type="text" placeholder="Procurar">
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+                                  </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    --->
 				</div>
-                <div class="social-media">
 
-                    <ul>
-
-                        <li><a href="#"><span>(31) 3481-5542</span><i class="fas fa-phone-square"></i></a></li>
-
-                        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-
-                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-
-                    </ul>
-
-                </div>
-				<div class="col-md-9 col-xs-9 text-center menu-1">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li class="active"><a href="sobre.html">Sobre</a></li>
-						<li><a href="outsourcing.html">Outsourcing</a></li>
-						<li class="has-dropdown">
-							<a href="servicos.html">Serviços</a>
-							<ul class="dropdown">
-								<li><a href="servicos.html#manutencao">Manutenção</a></li>
-								<li><a href="servicos.html#cftv" target="_top">CFTV</a></li>
-								<li><a href="servicos.html#rede">Rede</a></li>
-								<li><a href="servicos.html#produtos">Produtos</a></li>
-							</ul>
-						</li>
-						<li><a href="contato.html">Contato</a></li>
-						<li><a href="http://rac.cyclus.com.br/v0/index.php" target="_Cyclus_chamados">Chamados</a></li>
-					</ul>
-				</div>
-				<!---
-				<div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
-					<ul>
-						<li class="search">
-							<div class="input-group">
-						      <input type="text" placeholder="Procurar">
-						      <span class="input-group-btn">
-						        <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
-						      </span>
-						    </div>
-						</li>
-					</ul>
-				</div>
-				--->
 			</div>
-			
-		</div>
-	</nav>
+		</nav>
 
 	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(custom-images/capa-sobre.jpeg);">
 		<div class="overlay"></div>
@@ -192,15 +197,15 @@
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2">
-					<form class="form-inline">
+					<form class="form-inline" method="post" action="sendmail.php">
 						<div class="col-md-6 col-sm-6">
 							<div class="form-group">
 								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Nome">
+								<input type="text" id="fname" name="fname" class="form-control" placeholder="Nome">
 							</div>
 							<div class="form-group">
 								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
+								<input type="email" class="form-control" name="email" id="email" placeholder="Email">
 							</div>
 						</div>
 						
@@ -249,9 +254,9 @@
 						<ul>
 							<li><a href="tel:553134815542"><i class="fas fa-phone-square"></i></a></li>
 							<li><a href="https://wa.me/5531997649495"><i class="fab fa-whatsapp-square"></i></a></li>
-							<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/Cyclus-Informática-107720493972738"><i class="fab fa-facebook-square"></i></a></li>
+							<li><a href="https://www.instagram.com/cyclusinformatica/" target="_new"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/cyclus-informática" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 						</ul>
 					</div>
 					<p>

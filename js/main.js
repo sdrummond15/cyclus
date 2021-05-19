@@ -1,3 +1,59 @@
+//ENVIO DE CONTATO
+    $('#btn').click(function (e) {
+        var nome = $('#nome').val();
+        var email = $('#email').val();
+        var telefone = $('#phone').val();
+        var msg = $('#msg').val();
+        if (nome.length <= 3) {
+            alert('Informe seu nome');
+            return false;
+        }
+        if (email.length <= 5) {
+            alert('Informe seu email');
+            return false;
+        }
+        if (IsEmail(email) == false) {
+            alert('Informe um e-mail válido');
+            return false;
+        }
+        if (msg.length <= 5) {
+            alert('Escreva uma mensagem');
+            return false;
+        }
+        var urlData = "&nome=" + nome + "&email=" + email + "&telefone=" + telefone + "&msg=" + msg;
+        $.ajax({
+            type: "POST",
+            url: 'sendmail.php',
+            async: true,
+            data: urlData,
+            success: function (data) {
+                $('#retornoHTML').prepend(data);
+            },
+            beforeSend: function () {
+                $('.loading').fadeIn('fast');
+            }, complete: function () {
+                $('.loading').fadeOut('fast');
+                $("#nome").val("");
+                $("#email").val("");
+                $("#phone").val("");
+                $("#msg").val("");
+            }
+        });
+
+        function IsEmail(email) {
+            var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!regex.test(email)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    });
+
+
+
+
+
 (function () {
 
     $('.carousel').carousel({
